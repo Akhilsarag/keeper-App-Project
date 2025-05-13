@@ -1,3 +1,1 @@
-Deploy links:
-Netlify:
-Vercel:
+The deployed link is : https://keeper-app-project1.vercel.app/
