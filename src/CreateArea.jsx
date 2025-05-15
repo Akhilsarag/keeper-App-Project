@@ -14,14 +14,20 @@ function CreateArea(props){
         }
       })
     }
-    function submitNote(event){
-        props.onAdd(note)
+    function submitNote(event) {
+        event.preventDefault();
+      
+        if (note.title.trim() === "" && note.content.trim() === "") {
+          return; 
+        }
+      
+        props.onAdd(note);
         setNote({
-            title:"",
-            content:""
-        })
-        event.preventDefault()
-    }
+          title: "",
+          content: ""
+        });
+      }
+      
     return (
         <div>
             <form>
